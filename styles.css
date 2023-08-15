@@ -1,0 +1,31 @@
+div { 
+  /* border: 2px solid red; */
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.text {
+  flex: 1;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  font-size: 128px;
+}
+
+.row {
+  flex: 1;
+  display: flex;
+}
+
+.row button {
+  flex: 1;
+  font-size: 128px;
+}
