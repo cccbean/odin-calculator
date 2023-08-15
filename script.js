@@ -96,16 +96,23 @@ function addNegative() {
 function calculate() {
   const textBox = document.querySelector(".text");
   let textArr = textBox.textContent.split(" ");
-  console.log(textArr);
 
   while (textArr.length > 3) {
-    
+    let productIndex = textArr.findIndex((element) => element === "*" || element === "/");
+    let sumIndex = textArr.findIndex((element) => element === "+" || element === "-");
+    if (productIndex > 0) {
+      let operateThree = textArr.slice(productIndex - 1, productIndex + 2);
+      textArr.splice(productIndex - 1, 3, `${operate(operateThree[0], operateThree[1], operateThree[2])}`);
+    }
+    else {
+      let operateThree = textArr.slice(sumIndex - 1, sumIndex + 2);
+      textArr.splice(sumIndex - 1, 3, `${operate(operateThree[0], operateThree[1], operateThree[2])}`);
+    }
   }
 
   textBox.textContent = operate(textArr[0], textArr[1], textArr[2]);
   
 }
-
 
 
 makeButtons();
