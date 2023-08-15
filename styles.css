@@ -18,14 +18,31 @@ body {
   justify-content: right;
   align-items: center;
   font-size: 128px;
+  background-color: #FEF2F4;
 }
 
 .row {
   flex: 1;
   display: flex;
+  background-color: #FEF2F4;
 }
 
-.row button {
+button {
   flex: 1;
   font-size: 128px;
+  cursor: pointer;
+  background-color: #FCC8D1;
+  border-radius: 32px;
+}
+
+button:hover {
+  background-color: #FFABAB;
+}
+
+.special {
+  background-color: #D14D72;
+}
+
+.special:hover {
+  background-color: #92354F;
 }

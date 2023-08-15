@@ -28,7 +28,7 @@ function operate(a, operator, b) {
     return multiply(a, b);
   }
   else if (operator === "/") {
-    return divide(a, b);
+    return Math.round(divide(a, b) * 10000000) / 10000000;
   }
 }
 
